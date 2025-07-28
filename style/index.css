@@ -1,0 +1,124 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+.sour-gummy-uniquifier, .menu-item { font-family: "Sour Gummy", sans-serif; }
+.pt-sans-regular, .pt-sans-bold, * { font-family: "PT Sans", sans-serif; }
+.pt-sans-bold { font-weight: 700; }
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; list-style: none; color: black; }
+
+body { background: #D1D5DB; overflow-x: hidden}
+h1 { text-align: center; background: black; color: aliceblue; font-size: 20px; padding: 10px; font-family:"Special Gothic Expanded One", sans-serif;}
+header { background: #F8F9FA;position: fixed; width: 100%; z-index: 9999;}
+
+/* Cabeçalho cima */
+.cabeçalho_cima { display: flex; justify-content: flex-end; align-items: center; padding-top: 5px; padding-right:20px; gap: 15px; }
+.icone_login img { width: 50px; }
+.login-box { position: relative; }
+.login-box summary { cursor: pointer; }
+.login-box[open] .login-conteudo { display: block; }
+.login-box[open] .login-conteudo input{border: #bdbdbd solid 2px; border-radius: 5px; }
+.login-conteudo { position: absolute; right: 0; top: 25px; background: #D1D5DB; border: 1px solid #bdbdbd; padding: 10px; z-index: 1000; display: none; width: 200px; }
+.login-conteudo button { background: #F1F5F9; border: none; padding: 2px; margin: 5px 0; border-radius: 4px; color:#636363; }
+.login-box input { width: 100%; margin-bottom: 5px; padding: 5px; }
+
+/* Cabeçalho meio */
+.cabeçalho_meio { display: flex; align-items: center; justify-content: space-between; }
+.logo { height: 100px; position: relative; bottom: 70px; }
+.logo img { width: 180px; }
+.barra_pesquisa form { display: flex; position: relative; padding-right: 60px;}
+.barra_pesquisa .Pesquisa { padding: 8px 12px; font-size: 20px; border: none; background: #8d8d8d4f; width: 600px; }
+.barra_pesquisa .Pesquisa::placeholder {color:rgba(0, 0, 0, 0.534);}
+.barra_pesquisa .botao_pesquisa { background: none; border: none; cursor: pointer; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+.barra_pesquisa .botao_pesquisa img { width: 40px;  }
+.icones {display: flex; justify-content: space-between; margin: px;}
+.favorito {margin-right: 20px;}
+.favorito img{ width: 35px;}
+.carrinho { margin-right: 20px;}
+.carrinho img{ width: 35px;}
+
+/* Cabeçalho baixo */
+.cabeçalho_baixo .menu-container { display: flex; justify-content: space-around; padding: 0; flex-wrap: wrap; }
+.menu-item { padding: 10px 20px; transition: background 0.3s; }
+.menu-item a, .menu-item summary, .menu-dropdown .dropdown-content a { color: #ce2c16; font-size: 16px; cursor: pointer; font-family: "Special Gothic Expanded One", sans-serif;}
+.menu-item:hover, .menu-dropdown .dropdown-content a:hover { background: #D1D5DB; }
+.menu-dropdown details { position: relative; }
+.menu-dropdown .dropdown-content { display: flex; flex-direction: column; position: absolute; background: #D1D5DB; top: 100%; left: 0; z-index: 1000; }
+
+/* Responsivo */
+@media (max-width:500px){
+  .cabeçalho_baixo, .cabeçalho_meio .carrinho { display: none; }
+}
+@media (max-width: 600px) {
+  .barra_pesquisa form { width: 90vw; padding-right: 35px; }
+  .barra_pesquisa .Pesquisa { font-size: 18px; }
+}
+@media (max-width: 900px) {
+  .menu-container{ display: none; }
+  .cabeçalho_meio { justify-content: center; flex-direction: column; gap: 10px; }
+  .cabeçalho_meio .logo { bottom: 0; height: auto; }
+  .barra_pesquisa form { padding-right: 0; }
+  h1 { font-size: 16px; padding: 6px; }
+}
+
+/*anucio*/
+.anucio{display: flex;}
+.anucio li {margin-left: 20px;animation: rolagem 20s linear infinite;
+  scroll-behavior: smooth;
+}
+
+@keyframes rolagem {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.anucio img{width: 700px;}
+
+/* Produtos */
+main {padding-top: 280px ;}
+.produtos{ margin: 20px; background-color: #f1f1f1;}
+.n_produtos , .populares, .promoção{display: flex;  margin:20 px; padding: 10px; position: relative; justify-content: space-between; background-color: #fff; border-radius: 10px;}
+.produto { padding: 20px; background-color:#f1f1f1; border-radius: 5px;}
+.produto img{ width: 150px; border-radius: 5px;}
+.produto p{text-align: center; font-family: "PT Sans", sans-serif;}
+h3{text-shadow:none; text-align: center; position: relative; ;color:black; margin: 10px; font-family:"Special Gothic Expanded One", sans-serif;}
+
+
+/*Rodapé*/
+footer { height: 100px; background: #ce2c16; margin-top: 40px; }
+.rodape {
+  background-color: #ce2c16;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+}
+
+.footer-header h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.footer-header nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-header nav ul li a {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.footer-header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer p.copyright {
+  font-size: 14px;
+  margin-top: 20px;
+}
